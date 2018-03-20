@@ -18,7 +18,6 @@ pipeline {
             echo 'Code deployed'
           }
         }
-      }
     }
-  }
 }
+
