@@ -25,12 +25,12 @@ pipeline {
         stage('Deploy to Staging') {
           steps {
             //bat 'winscp -i "C:\\Users\\Dioni\\Dropbox\\Aws\\key\\tomcat-jenkins-study-stag.pem" **/target/*.war ec2-user@${params.tomcat_dev}: /var/lib/tomcat8/webapps'
-          bat "winscp -i /Users/Dioni/Dropbox/Aws/key/tomcat-jenkins-study-stag.pem **/target/*.war ec2-user@${params.tomcat_dev}: /var/lib/tomcat8/webapps"
+          bat "Winscp -i /Users/Dioni/Dropbox/Aws/key/tomcat-jenkins-study-stag.pem **/target/*.war ec2-user@${params.tomcat_dev}: /var/lib/tomcat8/webapps"
           }
         }
         stage('Deploy to Production') {
           steps {
-            bat "winscp -i /Users/Dioni/Dropbox/Aws/key/tomcat-jenkins-study.pem **/target/*.war ec2-user@${params.tomcat_prod}: /var/lib/tomcat8/webapps"
+            bat "Winscp -i /Users/Dioni/Dropbox/Aws/key/tomcat-jenkins-study.pem **/target/*.war ec2-user@${params.tomcat_prod}: /var/lib/tomcat8/webapps"
           }
         }
       }
