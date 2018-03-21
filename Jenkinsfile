@@ -24,13 +24,13 @@ pipeline {
       parallel{
         stage('Deploy to Staging') {
           steps {
-            sh "scp -i C:\Users\Dioni\Dropbox\Aws\Key Pair\Diopss\tomcat-jenkins-study-stag.pem
+            sh "scp -i C:/Users/Dioni/Dropbox/Aws/Key Pair/Diopss/tomcat-jenkins-study-stag.pem
             **/target/*.war ec2-user@${params.tomcat_dev}: /var/lib/tomcat8/webapps"
           }
         }
         stage('Deploy to Production') {
           steps {
-            sh "scp -i C:\Users\Dioni\Dropbox\Aws\Key Pair\Diopss\tomcat-jenkins-study.pem
+            sh "scp -i C:/Users/Dioni/Dropbox/Aws/Key Pair/Diopss/tomcat-jenkins-study.pem
             **/target/*.war ec2-user@${params.tomcat_prod}: /var/lib/tomcat8/webapps"
           }
         }
