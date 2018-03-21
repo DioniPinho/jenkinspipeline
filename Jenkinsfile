@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Deploy to Production') {
           steps {
-            sh "scp -i C:/Users/Dioni/Dropbox/Aws/Key Pair/Diopss/tomcat-jenkins-study.pem ''\n''
+            sh "scp -i C:/Users/Dioni/Dropbox/Aws/Key Pair/Diopss/tomcat-jenkins-study.pem '\n'
             **/target/*.war ec2-user@${params.tomcat_prod}: /var/lib/tomcat8/webapps"
           }
         }
